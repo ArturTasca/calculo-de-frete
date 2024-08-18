@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class CalculadoraDeFrete
+private class CalculadoraDeFrete
 {
     // Variáveis para armazenar o endereço
     string logradouro;  
@@ -16,9 +16,7 @@ public class CalculadoraDeFrete
     double pesoGramas;  
 
     // Construtor
-    public CalculadoraDeFrete(string logradouro, int numero, string cep, string bairro,
-                              string municipio, string estado, double distanciaKm,
-                              double volumeM3, double pesoGramas)
+    public CalculadoraDeFrete(string logradouro,int numero,string cep,string bairro,string municipio,string estado,double distanciaKm,double volumeM3,double pesoGramas)
     {
         // Inicializa as variáveis com os valores fornecidos
         this.logradouro = logradouro;
@@ -35,7 +33,7 @@ public class CalculadoraDeFrete
     // Método para calcular o frete
     public void CalcularFrete()
     {
-        string endereco = $"{logradouro}, {numero}, {bairro}, {municipio} - {estado}, CEP: {cep}";
+        string endereco = $"{logradouro},{numero},{bairro},{municipio} - {estado},CEP: {cep}";
         Console.WriteLine("Endereço: " + endereco);
 
         double custoDistancia = distanciaKm * 1.20; 
